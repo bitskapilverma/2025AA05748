@@ -124,4 +124,15 @@ This project shows that classical machine learning models combined with effectiv
 ---
 
 ## 👩‍💻 Author
-**Surbhi**
+Kapil Verma
+Roll Number: 2025AA05748
+Email: 2025aa05748@wilp.bits-pilani.ac.in
+BITS Pilani - M.Tech (AIML)
+
+📄 License
+This project is created for educational purposes as part of BITS Pilani coursework.
+
+🙏 Acknowledgments
+BITS Pilani Work Integrated Learning Programmes
+Kaggle for providing the dataset
+Streamlit Community Cloud for free hosting
