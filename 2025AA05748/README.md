@@ -41,12 +41,12 @@ The following classical machine learning models were implemented and evaluated:
 
 | ML Model Name | Accuracy | AUC | Precision | Recall | F1 Score | MCC |
 |--------------|----------|-----|-----------|--------|----------|-----|
-| Logistic Regression | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
-| Decision Tree | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
-| kNN | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
-| Naive Bayes | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
-| Random Forest (Ensemble) | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
-| XGBoost (Ensemble) | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
+| Logistic Regression | 0.5963 | 0.6239 | 0.5990 | 0.5825 | 0.5906 | 0.1926 |
+| Decision Tree | 0.5483 | 0.5483 | 0.5487 | 0.5450 | 0.5468 | 0.0967 |
+| kNN | 0.5892 | 0.6264 | 0.5921 | 0.5733 | 0.5826 | 0.1784 |
+| Naive Bayes | 0.5975 | 0.6390 | 0.6005 | 0.5825 | 0.5914 | 0.1951 |
+| Random Forest (Ensemble) | 0.6221 | 0.6655 | 0.6314 | 0.5867 | 0.6082 | 0.2448 |
+| XGBoost (Ensemble) | 0.6017 | 0.6497 | 0.6059 | 0.5817 | 0.5935 | 0.2035 |
 
 📌 Replace `0.XX` with actual metric values obtained from the notebook.
 
