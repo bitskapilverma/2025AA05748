@@ -156,5 +156,3 @@ if st.button("Load CIFAR-10 Test Samples"):
         output_dict=True
     )
     st.dataframe(pd.DataFrame(report).transpose())
-
-!pip install streamlit
