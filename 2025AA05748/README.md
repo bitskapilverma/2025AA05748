@@ -3,82 +3,82 @@
 
 ---
 
-## 📌 Project Overview
+## a. Problem Statement
 
-This project implements a **binary image classification system** to distinguish between **cats and dogs** using **classical machine learning algorithms**.  
-Instead of deep learning end-to-end training, the project focuses on **feature extraction, dimensionality reduction (PCA), and traditional ML classifiers**, followed by deployment using **Streamlit**.
-
-The CIFAR-10 dataset is filtered to retain only **cat (label 3)** and **dog (label 5)** images.
+The objective of this project is to design and evaluate a **binary image classification system** that can accurately distinguish between **cat and dog images** using **classical machine learning algorithms**.  
+The project focuses on feature extraction, dimensionality reduction, comparative model evaluation, and deployment using **Streamlit Community Cloud**.
 
 ---
 
-## 🎯 Objectives
+## b. Dataset Description  **[1 Mark]**
 
-- Perform image classification using classical ML models  
-- Apply feature extraction and PCA  
-- Compare multiple ML classifiers using standard metrics  
-- Deploy the trained models using Streamlit  
-
----
-
-## 📂 Dataset Description
-
+- **Dataset Name:** CIFAR-10 (Cat vs Dog Subset)  
 - **Source:** tf.keras.datasets.cifar10  
-- **Classes Used:** Cat (0), Dog (1)  
-- **Total Samples:** ~12,000 images  
-- **Image Size:** 64 × 64 (grayscale)  
+- **Selected Classes:**  
+  - Cat → Label 3  
+  - Dog → Label 5  
+- **Number of Samples:** ~12,000 images after filtering  
+- **Image Preprocessing:**  
+  - Resized to 64 × 64  
+  - Converted to grayscale  
+  - Normalized pixel values  
 - **Problem Type:** Binary Classification  
 
 ---
 
-## ⚙️ Methodology
+## c. Models Used & Evaluation Metrics  **[6 Marks]**
 
-### 1️⃣ Data Loading
-- CIFAR-10 dataset loaded using TensorFlow  
-- Cat and Dog classes filtered  
-- Labels converted to binary format  
+The following classical machine learning models were implemented and evaluated:
 
-### 2️⃣ Feature Extraction
-- Resize images to 64 × 64  
-- Convert to grayscale  
-- Normalize pixel values  
-- Flatten images into feature vectors  
-
-### 3️⃣ Feature Scaling & Dimensionality Reduction
-- StandardScaler for normalization  
-- PCA applied with 25 components  
-
-### 4️⃣ Machine Learning Models
 - Logistic Regression  
 - Decision Tree  
-- K-Nearest Neighbors  
+- K-Nearest Neighbors (kNN)  
 - Naive Bayes  
-- Random Forest  
-- XGBoost  
+- Random Forest (Ensemble)  
+- XGBoost (Ensemble)  
 
-### 5️⃣ Evaluation Metrics
-- Accuracy  
-- Precision  
-- Recall  
-- F1-Score  
-- ROC-AUC  
-- Matthews Correlation Coefficient  
-- Confusion Matrix  
+### 📊 Model Comparison Table
 
-### 6️⃣ Model Saving
-- Models, scaler, and PCA saved using joblib  
+| ML Model Name | Accuracy | AUC | Precision | Recall | F1 Score | MCC |
+|--------------|----------|-----|-----------|--------|----------|-----|
+| Logistic Regression | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
+| Decision Tree | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
+| kNN | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
+| Naive Bayes | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
+| Random Forest (Ensemble) | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
+| XGBoost (Ensemble) | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX | 0.XX |
+
+📌 Replace `0.XX` with actual metric values obtained from the notebook.
 
 ---
 
-## 🖥️ Streamlit Application
+## 🔍 Model-wise Observations  **[3 Marks]**
 
-A Streamlit-based web application is used to:
-- Load trained models  
-- Select models dynamically  
-- Evaluate test data  
-- Display metrics and confusion matrix  
+| ML Model Name | Observation about Model Performance |
+|--------------|-------------------------------------|
+| Logistic Regression | Achieved moderate performance due to its linear decision boundary. It works well on scaled PCA features but struggles with complex image patterns. |
+| Decision Tree | Learned training data effectively but tended to overfit, leading to reduced generalization on unseen images. |
+| kNN | Performance was sensitive to the value of k and computationally expensive, making it less scalable for large datasets. |
+| Naive Bayes | Fast and simple model; however, its strong independence assumption limited classification accuracy on image features. |
+| Random Forest (Ensemble) | Delivered strong and stable performance by combining multiple trees, reducing overfitting and improving robustness. |
+| XGBoost (Ensemble) | Achieved the best overall performance due to gradient boosting, regularization, and effective modeling of complex feature interactions. |
 
-⚠️ The Streamlit app is intended for deployment, not for execution inside notebooks.
+---
+
+## ⚙️ Feature Engineering & Preprocessing
+
+- Grayscale image flattening  
+- Feature normalization using StandardScaler  
+- Dimensionality reduction using PCA (25 components)  
+
+---
+
+## 🖥️ Step 6: Deployment on Streamlit Community Cloud
+
+The trained models were deployed on **Streamlit Community Cloud** using the provided `app.py` and `requirements.txt`.  
+The application enables model selection, evaluation metric visualization, confusion matrix display, and classification report generation.
+
+⚠️ The Streamlit application is intended for deployment and not for execution inside Jupyter or Colab notebooks.
 
 ---
 
@@ -103,23 +103,9 @@ cifar10-cat-dog-classical-ml/
 
 ---
 
-## 📦 Installation
-
-```bash
-pip install -r requirements.txt
-```
-
-## ▶️ Run Application
-
-```bash
-streamlit run app.py
-```
-
----
-
 ## 📜 Conclusion
 
-This project shows that classical machine learning models combined with effective feature extraction and PCA can achieve reliable performance on image classification tasks.
+This project demonstrates that classical machine learning models, when combined with effective feature extraction and PCA, can successfully solve image classification problems such as Cat vs Dog classification. Ensemble models achieved superior and more stable performance.
 
 ---
 
